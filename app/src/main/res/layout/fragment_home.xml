@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground">
+
+    <ImageView
+        android:id="@+id/wallpaperImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Wallpaper" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_overlay_bottom" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top half: Clock and date -->
+        <LinearLayout
+            android:id="@+id/clockDateSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/home_padding_horizontal"
+            android:paddingEnd="@dimen/home_padding_horizontal">
+
+            <TextView
+                android:id="@+id/clockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/selawik_light"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/wp_white"
+                android:textSize="@dimen/clock_text_size"
+                android:includeFontPadding="false"
+                tools:text="10:30" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/selawik_semilight"
+                android:textColor="@color/wp_white_70"
+                android:textSize="@dimen/date_text_size"
+                android:layout_marginTop="4dp"
+                tools:text="Saturday, February 22" />
+
+        </LinearLayout>
+
+        <!-- Bottom half: Tile grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pinnedAppsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="@dimen/home_padding_bottom" />
+
+    </LinearLayout>
+
+    <!-- Floating drag overlay for tile rearrangement -->
+    <ImageView
+        android:id="@+id/dragOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:contentDescription="Dragged tile" />
+
+    <!-- WP10-style tile action bar (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/tileActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/wp_black_80"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/actionUnpin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_unpin"
+            android:drawablePadding="2dp"
+            android:text="@string/tile_action_unpin"
+            android:textColor="@color/wp_white"
+            android:textSize="11sp"
+            android:fontFamily="@font/selawik_semilight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/actionResize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_resize"
+            android:drawablePadding="2dp"
+            android:text="@string/tile_action_resize"
+            android:textColor="@color/wp_white"
+            android:textSize="11sp"
+            android:fontFamily="@font/selawik_semilight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/actionInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_info"
+            android:drawablePadding="2dp"
+            android:text="@string/tile_action_info"
+            android:textColor="@color/wp_white"
+            android:textSize="11sp"
+            android:fontFamily="@font/selawik_semilight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/actionUninstall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_uninstall"
+            android:drawablePadding="2dp"
+            android:text="@string/tile_action_uninstall"
+            android:textColor="@color/wp_white"
+            android:textSize="11sp"
+            android:fontFamily="@font/selawik_semilight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/actionDone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_check_accent"
+            android:drawablePadding="2dp"
+            android:text="@string/tile_action_done"
+            android:textColor="@color/wp_white"
+            android:textSize="11sp"
+            android:fontFamily="@font/selawik_semilight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</FrameLayout>

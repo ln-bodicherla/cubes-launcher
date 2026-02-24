@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wp_black">#FF000000</color>
+    <color name="wp_white">#FFFFFFFF</color>
+    <color name="wp_white_70">#B3FFFFFF</color>
+    <color name="wp_white_10">#1AFFFFFF</color>
+    <color name="wp_accent_blue">#FF0078D7</color>
+    <color name="transparent">#00000000</color>
+    <color name="wp_white_50">#80FFFFFF</color>
+    <color name="wp_white_30">#4DFFFFFF</color>
+    <color name="wp_dark_gray">#FF1A1A1A</color>
+    <color name="wp_black_80">#CC000000</color>
+    <color name="wp_notification_bg">#FF1F1F1F</color>
+
+    <!-- WP10 Accent Colors -->
+    <color name="accent_lime">#FFA4C400</color>
+    <color name="accent_green">#FF60A917</color>
+    <color name="accent_emerald">#FF008A00</color>
+    <color name="accent_teal">#FF00ABA9</color>
+    <color name="accent_cyan">#FF1BA1E2</color>
+    <color name="accent_cobalt">#FF3E65FF</color>
+    <color name="accent_indigo">#FF6A00FF</color>
+    <color name="accent_violet">#FFAA00FF</color>
+    <color name="accent_pink">#FFF472D0</color>
+    <color name="accent_magenta">#FFD80073</color>
+    <color name="accent_crimson">#FFA20025</color>
+    <color name="accent_red">#FFE51400</color>
+    <color name="accent_orange">#FFFA6800</color>
+    <color name="accent_amber">#FFF0A30A</color>
+    <color name="accent_yellow">#FFE3C800</color>
+    <color name="accent_brown">#FF825A2C</color>
+    <color name="accent_olive">#FF6D8764</color>
+    <color name="accent_steel">#FF647687</color>
+    <color name="accent_mauve">#FF76608A</color>
+    <color name="accent_taupe">#FF87794E</color>
+
+    <!-- Light theme colors -->
+    <color name="wp_light_bg">#FFFFFFFF</color>
+    <color name="wp_light_text">#FF000000</color>
+    <color name="wp_light_text_secondary">#B3000000</color>
+    <color name="wp_light_surface_dim">#1A000000</color>
+    <color name="wp_light_surface">#FFEDEDED</color>
+    <color name="wp_light_ripple">#22000000</color>
+
+    <!-- Dark theme surface/ripple -->
+    <color name="wp_dark_surface">#FF1F1F1F</color>
+    <color name="wp_dark_ripple">#44FFFFFF</color>
+</resources>

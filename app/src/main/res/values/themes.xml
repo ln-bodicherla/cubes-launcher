@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default alias (points to Dark) -->
+    <style name="Theme.CubesLauncher" parent="Theme.CubesLauncher.Dark" />
+
+    <!-- Dark theme -->
+    <style name="Theme.CubesLauncher.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/wp_black</item>
+        <item name="android:statusBarColor">@color/wp_black</item>
+        <item name="android:navigationBarColor">@color/wp_black</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/selawik_regular</item>
+        <item name="colorPrimary">@color/wp_accent_blue</item>
+        <item name="colorPrimaryVariant">@color/wp_accent_blue</item>
+        <item name="colorOnPrimary">@color/wp_white</item>
+        <item name="colorSurface">@color/wp_black</item>
+        <item name="colorOnSurface">@color/wp_white</item>
+        <!-- Custom attrs -->
+        <item name="wpBackground">@color/wp_black</item>
+        <item name="wpTextPrimary">@color/wp_white</item>
+        <item name="wpTextSecondary">@color/wp_white_70</item>
+        <item name="wpSurfaceDim">@color/wp_white_10</item>
+        <item name="wpSurface">@color/wp_dark_surface</item>
+        <item name="wpRippleOverlay">@color/wp_dark_ripple</item>
+    </style>
+
+    <!-- Light theme -->
+    <style name="Theme.CubesLauncher.Light" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/wp_light_bg</item>
+        <item name="android:statusBarColor">@color/wp_light_bg</item>
+        <item name="android:navigationBarColor">@color/wp_light_bg</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/selawik_regular</item>
+        <item name="colorPrimary">@color/wp_accent_blue</item>
+        <item name="colorPrimaryVariant">@color/wp_accent_blue</item>
+        <item name="colorOnPrimary">@color/wp_white</item>
+        <item name="colorSurface">@color/wp_light_bg</item>
+        <item name="colorOnSurface">@color/wp_light_text</item>
+        <!-- Custom attrs -->
+        <item name="wpBackground">@color/wp_light_bg</item>
+        <item name="wpTextPrimary">@color/wp_light_text</item>
+        <item name="wpTextSecondary">@color/wp_light_text_secondary</item>
+        <item name="wpSurfaceDim">@color/wp_light_surface_dim</item>
+        <item name="wpSurface">@color/wp_light_surface</item>
+        <item name="wpRippleOverlay">@color/wp_light_ripple</item>
+    </style>
+
+</resources>

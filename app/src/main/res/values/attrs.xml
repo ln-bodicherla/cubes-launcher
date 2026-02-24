@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="wpBackground" format="color" />
+    <attr name="wpTextPrimary" format="color" />
+    <attr name="wpTextSecondary" format="color" />
+    <attr name="wpSurfaceDim" format="color" />
+    <attr name="wpSurface" format="color" />
+    <attr name="wpRippleOverlay" format="color" />
+</resources>

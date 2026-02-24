@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/editTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_add"
+            android:textSize="40sp"
+            android:fontFamily="@font/selawik_light"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp" />
+
+        <!-- Account picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_account"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:textColor="?attr/wpTextSecondary"
+            android:paddingBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/accountSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_dial_key_rect"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <!-- First name -->
+        <EditText
+            android:id="@+id/firstNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="@string/contacts_first_name"
+            android:textColorHint="?attr/wpTextSecondary"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="@drawable/bg_dial_key_rect"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <!-- Last name -->
+        <EditText
+            android:id="@+id/lastNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="@string/contacts_last_name"
+            android:textColorHint="?attr/wpTextSecondary"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="@drawable/bg_dial_key_rect"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <!-- Phone numbers section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_phone"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:textColor="?attr/wpTextSecondary"
+            android:paddingTop="20dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:id="@+id/phonesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/addPhoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_add_phone"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Email addresses section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_email"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:textColor="?attr/wpTextSecondary"
+            android:paddingTop="20dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:id="@+id/emailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/addEmailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_add_email"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="@string/phone_save"
+                android:textColor="@color/wp_white"
+                android:textSize="18sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="18sp"
+                android:fontFamily="@font/selawik_regular"
+                android:background="@drawable/bg_dial_key_rect"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="64dp">
+
+        <!-- Search bar + gear icon -->
+        <LinearLayout
+            android:id="@+id/searchBarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/apps_list_padding_horizontal"
+            android:paddingEnd="@dimen/apps_list_padding_horizontal"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_bar_height"
+                android:background="@color/wp_white_10"
+                android:hint="@string/search_apps"
+                android:textColorHint="@color/wp_white_50"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="@dimen/search_bar_text_size"
+                android:fontFamily="@font/selawik_regular"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableTint="@color/wp_white_50"
+                android:drawablePadding="8dp" />
+
+        </LinearLayout>
+
+        <!-- App list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/appsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/apps_list_padding_horizontal"
+            android:paddingEnd="@dimen/apps_list_padding_horizontal"
+            android:paddingBottom="48dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <!-- Search FAB -->
+    <ImageButton
+        android:id="@+id/searchFab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_search"
+        android:scaleType="center"
+        android:contentDescription="@string/search_apps"
+        android:background="@null" />
+
+    <!-- Letter jump grid overlay (initially hidden) -->
+    <FrameLayout
+        android:id="@+id/letterGridOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <GridLayout
+            android:id="@+id/letterGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginTop="@dimen/apps_list_padding_top"
+            android:layout_marginStart="@dimen/apps_list_padding_horizontal"
+            android:layout_marginEnd="@dimen/apps_list_padding_horizontal"
+            android:columnCount="5"
+            android:clickable="true"
+            android:focusable="true"
+            android:useDefaultMargins="false" />
+
+    </FrameLayout>
+
+</FrameLayout>

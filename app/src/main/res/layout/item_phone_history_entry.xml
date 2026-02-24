@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="1dp">
+
+    <!-- Main entry tile (boxy like keypad keys) -->
+    <LinearLayout
+        android:id="@+id/entryTile"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_dial_key_rect">
+
+        <!-- Call type icon -->
+        <ImageView
+            android:id="@+id/callTypeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="@string/phone_call_type" />
+
+        <!-- Contact info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="22sp"
+                android:fontFamily="@font/selawik_regular"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/callTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:maxLines="1"
+                android:paddingTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Info icon (always visible) -->
+        <ImageView
+            android:id="@+id/infoButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_info"
+            android:contentDescription="@string/phone_info"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    </LinearLayout>
+
+    <!-- Expandable action row: call + message only -->
+    <LinearLayout
+        android:id="@+id/actionRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingTop="1dp">
+
+        <!-- Call button -->
+        <LinearLayout
+            android:id="@+id/actionCall"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_phone_call"
+                android:contentDescription="@null" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_call"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="17sp"
+                android:fontFamily="@font/selawik_regular" />
+        </LinearLayout>
+
+        <!-- Message button -->
+        <LinearLayout
+            android:id="@+id/actionMessage"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_phone_message"
+                android:contentDescription="@null" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_message"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="17sp"
+                android:fontFamily="@font/selawik_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tile_background"
+    android:clipChildren="false"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/pinnedAppIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:contentDescription="App icon" />
+
+    <TextView
+        android:id="@+id/pinnedAppLetters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/selawik_semibold"
+        android:textAllCaps="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/resizeIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:background="@color/wp_black_80"
+        android:src="@drawable/ic_resize"
+        android:scaleType="fitCenter"
+        android:contentDescription="Resize tile"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/notificationBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:minWidth="18dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:fontFamily="@font/selawik_semibold"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone" />
+
+</FrameLayout>

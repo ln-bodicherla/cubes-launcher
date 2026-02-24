@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/bg_dial_key_rect">
+
+    <!-- Call type icon -->
+    <ImageView
+        android:id="@+id/callTypeIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="14dp"
+        android:contentDescription="@string/phone_call_type" />
+
+    <!-- Call type + duration -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/callTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/callDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/selawik_regular"
+            android:maxLines="1"
+            android:paddingTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Date/time -->
+    <TextView
+        android:id="@+id/callDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="15sp"
+        android:fontFamily="@font/selawik_regular"
+        android:maxLines="1" />
+
+</LinearLayout>

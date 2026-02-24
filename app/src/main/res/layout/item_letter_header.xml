@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/letterHeaderTile"
+    android:layout_width="@dimen/letter_header_tile_size"
+    android:layout_height="@dimen/letter_header_tile_size"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="4dp"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/letterHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/selawik_semibold"
+        android:textColor="@color/wp_white"
+        android:textSize="@dimen/letter_header_text_size"
+        tools:text="a" />
+
+</FrameLayout>

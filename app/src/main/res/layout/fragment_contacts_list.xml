@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Search bar -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="@string/contacts_search"
+            android:textColorHint="?attr/wpTextSecondary"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="@drawable/bg_dial_key_rect"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/contacts_empty"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Letter grid overlay -->
+    <FrameLayout
+        android:id="@+id/letterGridOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <GridLayout
+            android:id="@+id/letterGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="5" />
+
+    </FrameLayout>
+
+    <!-- Add button -->
+    <TextView
+        android:id="@+id/addContactButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="30sp"
+        android:textColor="@color/wp_white"
+        android:fontFamily="@font/selawik_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_dial_key_rect" />
+
+</FrameLayout>

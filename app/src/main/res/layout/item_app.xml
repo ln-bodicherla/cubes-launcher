@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Icon inside a colored tile box (WP10 style) -->
+    <FrameLayout
+        android:id="@+id/appIconTile"
+        android:layout_width="@dimen/app_icon_tile_size"
+        android:layout_height="@dimen/app_icon_tile_size"
+        android:background="@color/wp_dark_gray"
+        android:layout_marginEnd="@dimen/app_item_icon_margin_end">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="@dimen/app_icon_size"
+            android:layout_height="@dimen/app_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="App icon" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/selawik_regular"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="@dimen/app_name_text_size"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Calculator" />
+
+</LinearLayout>

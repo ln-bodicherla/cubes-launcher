@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingBottom="48dp">
+
+        <!-- Header with back arrow + title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow"
+                android:background="@drawable/bg_wp10_back_button"
+                android:backgroundTint="?attr/wpTextPrimary"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="@dimen/settings_title_text_size"
+                android:fontFamily="@font/selawik_light"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== START SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_start"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Background mode -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_background"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/bgModeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?attr/wpSurfaceDim" />
+
+        <!-- Choose photo button -->
+        <TextView
+            android:id="@+id/choosePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_choose_photo"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+        <!-- Tile transparency -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_tile_transparency"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="6dp" />
+
+        <SeekBar
+            android:id="@+id/tileTransparencySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Show more tiles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_show_more_tiles"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_show_more_tiles_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/showMoreTilesSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Tile mode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_tile_mode"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_tile_mode_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/tileModeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Minimal tiles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_minimal_tiles"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_minimal_tiles_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/minimalTilesSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Usage tracking -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_usage_tracking"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_usage_tracking_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/usageTrackingSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== COLORS SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_colors"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Theme -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_theme"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/themeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?attr/wpSurfaceDim" />
+
+        <!-- Accent color -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_accent_color"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/accentColorGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:clipToPadding="false" />
+
+        <!-- ==================== LOCK SCREEN SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionLockScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_lock_screen"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Lock screen background -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_lock_screen_bg"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:id="@+id/chooseLockPhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_choose_photo"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_label_text_size"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>

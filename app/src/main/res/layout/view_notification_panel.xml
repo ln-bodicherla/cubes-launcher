@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6000000"
+    android:visibility="gone"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/status_bar_height"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Quick Settings Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- Quick settings grid row 1 (always visible) -->
+                <LinearLayout
+                    android:id="@+id/quickSettingsRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/quick_settings_tile_spacing" />
+
+                <!-- Quick settings grid row 2 (expandable) -->
+                <LinearLayout
+                    android:id="@+id/quickSettingsRow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/quick_settings_tile_spacing" />
+
+                <!-- Expand / Collapse button -->
+                <LinearLayout
+                    android:id="@+id/expandCollapseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/expandCollapseIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_qs_expand"
+                        android:contentDescription="@string/expand" />
+
+                    <TextView
+                        android:id="@+id/expandCollapseText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expand"
+                        android:textColor="@color/wp_white_70"
+                        android:textSize="@dimen/quick_settings_label_size"
+                        android:fontFamily="@font/selawik_regular"
+                        android:layout_marginStart="4dp"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+
+                <!-- Brightness slider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_qs_brightness"
+                        android:contentDescription="@string/qs_brightness"
+                        android:layout_marginEnd="12dp" />
+
+                    <SeekBar
+                        android:id="@+id/brightnessSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"
+                        android:progress="128"
+                        android:progressTint="@color/wp_white"
+                        android:thumbTint="@color/wp_white"
+                        android:progressBackgroundTint="@color/wp_white_30" />
+
+                </LinearLayout>
+
+                <!-- All Settings link -->
+                <TextView
+                    android:id="@+id/allSettingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_settings"
+                    android:textColor="@color/wp_white_70"
+                    android:textSize="@dimen/notification_app_name_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="12dp" />
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/wp_white_10"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Notifications Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/notifications"
+                    android:textColor="@color/wp_white"
+                    android:textSize="@dimen/notification_app_name_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/clearAllButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_all"
+                    android:textColor="@color/wp_white_70"
+                    android:textSize="@dimen/notification_app_name_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp" />
+
+            </LinearLayout>
+
+            <!-- Notifications List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notificationsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <!-- Empty state -->
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_notifications"
+                android:textColor="@color/wp_white_50"
+                android:textSize="@dimen/notification_body_text_size"
+                android:fontFamily="@font/selawik_regular"
+                android:gravity="center"
+                android:paddingTop="32dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

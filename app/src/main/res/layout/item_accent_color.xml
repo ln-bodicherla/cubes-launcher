@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/settings_accent_cell_size"
+    android:layout_height="@dimen/settings_accent_cell_size"
+    android:layout_margin="@dimen/settings_accent_spacing">
+
+    <View
+        android:id="@+id/colorSwatch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/checkMark"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_accent"
+        android:visibility="gone"
+        android:contentDescription="Selected" />
+
+</FrameLayout>

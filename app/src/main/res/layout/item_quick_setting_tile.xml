@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:id="@+id/tileBackground"
+        android:layout_width="@dimen/quick_settings_tile_size"
+        android:layout_height="@dimen/quick_settings_tile_size"
+        android:background="@color/wp_white_10"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tileIcon"
+            android:layout_width="@dimen/quick_settings_icon_size"
+            android:layout_height="@dimen/quick_settings_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="Quick setting"
+            tools:src="@drawable/ic_qs_wifi" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/wp_white_70"
+        android:textSize="@dimen/quick_settings_label_size"
+        android:fontFamily="@font/selawik_regular"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        tools:text="Wi-Fi" />
+
+</LinearLayout>

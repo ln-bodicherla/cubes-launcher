@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="accent_color_names">
+        <item>Lime</item>
+        <item>Green</item>
+        <item>Emerald</item>
+        <item>Teal</item>
+        <item>Cyan</item>
+        <item>Cobalt</item>
+        <item>Indigo</item>
+        <item>Violet</item>
+        <item>Pink</item>
+        <item>Magenta</item>
+        <item>Crimson</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Amber</item>
+        <item>Yellow</item>
+        <item>Brown</item>
+        <item>Olive</item>
+        <item>Steel</item>
+        <item>Mauve</item>
+        <item>Taupe</item>
+    </string-array>
+
+    <string-array name="accent_color_values">
+        <item>#A4C400</item>
+        <item>#60A917</item>
+        <item>#008A00</item>
+        <item>#00ABA9</item>
+        <item>#1BA1E2</item>
+        <item>#3E65FF</item>
+        <item>#6A00FF</item>
+        <item>#AA00FF</item>
+        <item>#F472D0</item>
+        <item>#D80073</item>
+        <item>#A20025</item>
+        <item>#E51400</item>
+        <item>#FA6800</item>
+        <item>#F0A30A</item>
+        <item>#E3C800</item>
+        <item>#825A2C</item>
+        <item>#6D8764</item>
+        <item>#647687</item>
+        <item>#76608A</item>
+        <item>#87794E</item>
+    </string-array>
+</resources>
