@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clock_text_size">96sp</dimen>
+    <dimen name="date_text_size">24sp</dimen>
+    <dimen name="app_name_text_size">24sp</dimen>
+    <dimen name="letter_header_text_size">24sp</dimen>
+    <dimen name="pinned_tile_icon_size">32dp</dimen>
+    <dimen name="pinned_tile_spacing">6dp</dimen>
+    <dimen name="tile_grid_spacing">6dp</dimen>
+    <dimen name="app_icon_size">24dp</dimen>
+    <dimen name="app_icon_tile_size">56dp</dimen>
+    <dimen name="letter_header_tile_size">56dp</dimen>
+    <dimen name="letter_grid_cell_size">56dp</dimen>
+    <dimen name="letter_grid_spacing">4dp</dimen>
+    <dimen name="letter_grid_text_size">24sp</dimen>
+    <dimen name="search_bar_height">48dp</dimen>
+    <dimen name="search_bar_text_size">16sp</dimen>
+    <dimen name="home_padding_horizontal">24dp</dimen>
+    <dimen name="home_padding_bottom">48dp</dimen>
+    <dimen name="apps_list_padding_horizontal">24dp</dimen>
+    <dimen name="apps_list_padding_top">48dp</dimen>
+    <dimen name="app_item_padding_vertical">10dp</dimen>
+    <dimen name="app_item_icon_margin_end">16dp</dimen>
+    <dimen name="letter_header_padding_top">16dp</dimen>
+    <dimen name="letter_header_padding_bottom">8dp</dimen>
+
+    <!-- Status bar -->
+    <dimen name="status_bar_height">48dp</dimen>
+    <dimen name="status_bar_top_inset">20dp</dimen>
+    <dimen name="status_bar_text_size">12sp</dimen>
+    <dimen name="status_bar_icon_size">14dp</dimen>
+    <dimen name="status_bar_padding_horizontal">20dp</dimen>
+    <dimen name="swipe_zone_height">80dp</dimen>
+
+    <!-- Notification icons in status bar -->
+    <dimen name="notification_icon_size">16dp</dimen>
+
+    <!-- Notification panel -->
+    <dimen name="notification_item_padding">16dp</dimen>
+    <dimen name="notification_title_text_size">14sp</dimen>
+    <dimen name="notification_body_text_size">13sp</dimen>
+    <dimen name="notification_app_name_text_size">11sp</dimen>
+    <dimen name="notification_app_icon_size">32dp</dimen>
+
+    <!-- Quick settings -->
+    <dimen name="quick_settings_tile_size">72dp</dimen>
+    <dimen name="quick_settings_icon_size">24dp</dimen>
+    <dimen name="quick_settings_label_size">10sp</dimen>
+    <dimen name="quick_settings_tile_spacing">4dp</dimen>
+
+    <!-- Settings -->
+    <dimen name="settings_accent_cell_size">48dp</dimen>
+    <dimen name="settings_accent_spacing">4dp</dimen>
+    <dimen name="settings_title_text_size">28sp</dimen>
+    <dimen name="settings_section_text_size">13sp</dimen>
+    <dimen name="settings_label_text_size">18sp</dimen>
+    <dimen name="settings_desc_text_size">14sp</dimen>
+
+    <!-- Phone dialer -->
+    <dimen name="phone_title_text_size">28sp</dimen>
+    <dimen name="phone_tab_bar_height">56dp</dimen>
+    <dimen name="phone_dial_button_size">72dp</dimen>
+    <dimen name="phone_dial_number_size">42sp</dimen>
+    <dimen name="phone_dial_sub_size">13sp</dimen>
+    <dimen name="phone_display_text_size">46sp</dimen>
+    <dimen name="phone_call_button_size">64dp</dimen>
+    <dimen name="phone_incall_name_size">46sp</dimen>
+    <dimen name="phone_incall_number_size">20sp</dimen>
+    <dimen name="phone_incall_state_size">20sp</dimen>
+    <dimen name="phone_speed_dial_tile_height">120dp</dimen>
+    <dimen name="phone_speed_dial_spacing">4dp</dimen>
+    <dimen name="phone_history_icon_size">20dp</dimen>
+    <dimen name="phone_history_name_size">20sp</dimen>
+    <dimen name="phone_history_time_size">14sp</dimen>
+
+    <!-- Messages -->
+    <dimen name="message_bubble_padding">10dp</dimen>
+    <dimen name="message_compose_bar_height">52dp</dimen>
+    <dimen name="message_contact_name_size">20sp</dimen>
+    <dimen name="message_preview_size">15sp</dimen>
+    <dimen name="message_timestamp_size">14sp</dimen>
+    <dimen name="message_body_size">16sp</dimen>
+    <dimen name="message_delivery_size">12sp</dimen>
+    <dimen name="message_separator_size">13sp</dimen>
+    <dimen name="message_initials_size">44dp</dimen>
+</resources>

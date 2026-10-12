@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="24dp">
+
+            <!-- City name -->
+            <TextView
+                android:id="@+id/cityNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="30sp"
+                android:fontFamily="@font/selawik_light"
+                tools:text="San Francisco" />
+
+            <!-- Temperature -->
+            <TextView
+                android:id="@+id/temperatureText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="80sp"
+                android:fontFamily="@font/selawik_light"
+                android:layout_marginTop="-8dp"
+                tools:text="72\u00B0" />
+
+            <!-- Condition + Icon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/conditionIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="8dp"
+                    tools:src="@drawable/ic_weather_clear" />
+
+                <TextView
+                    android:id="@+id/conditionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/selawik_semilight"
+                    tools:text="Clear" />
+
+            </LinearLayout>
+
+            <!-- High / Low -->
+            <TextView
+                android:id="@+id/highLowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="16sp"
+                android:fontFamily="@font/selawik_regular"
+                android:layout_marginTop="8dp"
+                tools:text="H:78\u00B0  L:62\u00B0" />
+
+            <!-- Feels like -->
+            <TextView
+                android:id="@+id/feelsLikeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:layout_marginTop="4dp"
+                tools:text="Feels like 70\u00B0" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/wpSurfaceDim"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- HOURLY header -->
+            <TextView
+                android:id="@+id/hourlyHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_hourly"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Hourly RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hourlyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:scrollbars="none" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/wpSurfaceDim"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 5-DAY FORECAST header -->
+            <TextView
+                android:id="@+id/dailyHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_daily"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Daily RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dailyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/wpSurfaceDim"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- DETAILS header -->
+            <TextView
+                android:id="@+id/detailsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_details"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Details grid: 2 columns, 3 rows -->
+            <!-- Row 1: Humidity, Wind -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_humidity"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/humidityValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="65%" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_wind"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/windValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="12 mph" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 2: UV Index, Pressure -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_uv_index"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/uvIndexValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_pressure"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/pressureValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="1013 hPa" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 3: Visibility, Dew Point -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_visibility"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/visibilityValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="10 mi" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_dew_point"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/selawik_regular" />
+
+                    <TextView
+                        android:id="@+id/dewPointValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/wpTextPrimary"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/selawik_light"
+                        tools:text="58\u00B0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Bottom bar: settings + add location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/settingsButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_weather_settings"
+                    android:background="?attr/wpRippleOverlay"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/settings_title" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/addLocationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/add_location"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:background="?attr/wpRippleOverlay"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Error view -->
+    <LinearLayout
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:gravity="center"
+            android:text="@string/error_loading_weather" />
+
+        <TextView
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/retry"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="14sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="?attr/wpRippleOverlay"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</FrameLayout>

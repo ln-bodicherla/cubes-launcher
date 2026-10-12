@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Clean calculator - WP10 style -->
+    <!-- Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,24h36c2.2,0 4,1.8 4,4v56c0,2.2 -1.8,4 -4,4H36c-2.2,0 -4,-1.8 -4,-4V28c0,-2.2 1.8,-4 4,-4z" />
+    <!-- Display cutout -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M38,30h32v12H38z" />
+    <!-- Button cutouts (3x4 grid) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M38,48h8v7h-8zM50,48h8v7h-8zM62,48h8v7h-8zM38,59h8v7h-8zM50,59h8v7h-8zM62,59h8v7h-8zM38,70h8v7h-8zM50,70h8v7h-8zM62,70h8v7h-8z" />
+</vector>

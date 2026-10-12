@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingBottom="48dp">
+
+        <!-- Header with back arrow + title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow"
+                android:background="@drawable/bg_wp10_back_button"
+                android:backgroundTint="?attr/wpTextPrimary"
+                android:contentDescription="@string/back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="28sp"
+                android:fontFamily="@font/selawik_light"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== ALARM SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_section_alarm"
+            android:textSize="13sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Snooze duration -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_snooze_duration"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/snoozeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?attr/wpSurfaceDim" />
+
+        <!-- Vibrate on alarm -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_vibrate"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_vibrate_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/vibrateSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

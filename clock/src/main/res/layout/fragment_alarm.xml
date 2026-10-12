@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground">
+
+    <!-- Alarm list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alarmsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="72dp"
+        android:clipToPadding="false" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/alarm_empty"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="28sp"
+        android:fontFamily="@font/selawik_semilight"
+        android:visibility="gone" />
+
+    <!-- Add alarm FAB button (bottom-right) -->
+    <TextView
+        android:id="@+id/addAlarmButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="#FFFFFFFF"
+        android:textSize="32sp"
+        android:fontFamily="@font/selawik_light"
+        android:clickable="true"
+        android:focusable="true" />
+
+</FrameLayout>

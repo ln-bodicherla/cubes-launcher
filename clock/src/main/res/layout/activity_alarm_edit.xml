@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingBottom="48dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_alarm_title"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="30sp"
+            android:fontFamily="@font/selawik_light"
+            android:paddingBottom="24dp" />
+
+        <!-- Time Picker -->
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Repeat days label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_alarm_repeat"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Day toggles row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dayMon"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_mon"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/dayTue"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_tue"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/dayWed"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_wed"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/dayThu"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_thu"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/dayFri"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_fri"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/daySat"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:gravity="center"
+                android:text="@string/day_sat"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/daySun"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/day_sun"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_alarm_label"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/labelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="?attr/wpSurfaceDim"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="18sp"
+            android:fontFamily="@font/selawik_regular"
+            android:hint="@string/edit_alarm_label_hint"
+            android:textColorHint="?attr/wpTextSecondary"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="24dp" />
+
+        <!-- Save button -->
+        <TextView
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="#FFFFFFFF"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Cancel button -->
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="?attr/wpSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="4dp" />
+
+        <!-- Delete button (hidden for new alarms) -->
+        <TextView
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="#FFFF4444"
+            android:textSize="17sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

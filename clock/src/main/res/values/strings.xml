@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="clock_title">Clock</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">delete</string>
+
+    <!-- Tabs -->
+    <string name="tab_alarm">alarm</string>
+    <string name="tab_world_clock">world clock</string>
+    <string name="tab_stopwatch">stopwatch</string>
+    <string name="tab_timer">timer</string>
+
+    <!-- Alarm -->
+    <string name="add_alarm">+</string>
+    <string name="alarm_empty">No alarms set.\nTap + to add one.</string>
+    <string name="edit_alarm_title">edit alarm</string>
+    <string name="edit_alarm_repeat">Repeat</string>
+    <string name="edit_alarm_label">Label</string>
+    <string name="edit_alarm_label_hint">Alarm label</string>
+    <string name="alarm_one_time">One time</string>
+    <string name="alarm_every_day">Every day</string>
+    <string name="alarm_weekdays">Weekdays</string>
+    <string name="alarm_weekends">Weekends</string>
+    <string name="dismiss">dismiss</string>
+    <string name="snooze">snooze</string>
+
+    <!-- Day abbreviations -->
+    <string name="day_mon">M</string>
+    <string name="day_tue">T</string>
+    <string name="day_wed">W</string>
+    <string name="day_thu">T</string>
+    <string name="day_fri">F</string>
+    <string name="day_sat">S</string>
+    <string name="day_sun">S</string>
+
+    <!-- World Clock -->
+    <string name="add_city">+</string>
+    <string name="world_clock_empty">No cities added.\nTap + to add one.</string>
+    <string name="city_picker_title">choose a city</string>
+    <string name="city_picker_search_hint">Search cities</string>
+
+    <!-- Stopwatch -->
+    <string name="stopwatch_start">start</string>
+    <string name="stopwatch_stop">stop</string>
+    <string name="stopwatch_lap">lap</string>
+    <string name="stopwatch_reset">reset</string>
+
+    <!-- Timer -->
+    <string name="timer_start">start</string>
+    <string name="timer_pause">pause</string>
+    <string name="timer_resume">resume</string>
+    <string name="timer_cancel">cancel</string>
+    <string name="timer_reset">reset</string>
+    <string name="timer_backspace">\u232B</string>
+
+    <!-- Settings -->
+    <string name="settings_title">settings</string>
+    <string name="settings_section_alarm">ALARM</string>
+    <string name="settings_snooze_duration">Snooze duration</string>
+    <string name="settings_vibrate">Vibrate</string>
+    <string name="settings_vibrate_desc">Vibrate when alarm rings</string>
+
+    <!-- Notifications -->
+    <string name="alarm_notification_title">Alarm</string>
+    <string name="alarm_channel_name">Alarms</string>
+    <string name="alarm_channel_description">Alarm notifications</string>
+    <string name="stopwatch_notification_title">Stopwatch</string>
+    <string name="stopwatch_channel_name">Stopwatch</string>
+    <string name="stopwatch_channel_description">Stopwatch running notifications</string>
+    <string name="timer_notification_title">Timer</string>
+    <string name="timer_channel_name">Timer</string>
+    <string name="timer_channel_description">Timer countdown notifications</string>
+    <string name="timer_finished_title">Timer finished</string>
+    <string name="timer_finished_text">Your timer has ended</string>
+    <string name="timer_finished_channel_name">Timer Finished</string>
+</resources>

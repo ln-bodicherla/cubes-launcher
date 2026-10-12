@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="weather_title">Weather</string>
+    <string name="app_name">Weather</string>
+
+    <!-- Main screen -->
+    <string name="section_hourly">HOURLY</string>
+    <string name="section_daily">5-DAY FORECAST</string>
+    <string name="section_details">DETAILS</string>
+    <string name="high_low_format">H:%1$d\u00B0  L:%2$d\u00B0</string>
+    <string name="feels_like_format">Feels like %1$d\u00B0</string>
+    <string name="temp_separator"> / </string>
+
+    <!-- Details -->
+    <string name="detail_humidity">HUMIDITY</string>
+    <string name="detail_wind">WIND</string>
+    <string name="detail_uv_index">UV INDEX</string>
+    <string name="detail_pressure">PRESSURE</string>
+    <string name="detail_visibility">VISIBILITY</string>
+    <string name="detail_dew_point">DEW POINT</string>
+    <string name="humidity_format">%1$d%%</string>
+    <string name="wind_mph_format">%1$.0f mph</string>
+    <string name="wind_kmh_format">%1$.0f km/h</string>
+    <string name="pressure_format">%1$.0f hPa</string>
+    <string name="visibility_format">10 mi</string>
+    <string name="uv_index_na">N/A</string>
+    <string name="dew_point_na">N/A</string>
+
+    <!-- Condition names -->
+    <string name="condition_clear">Clear</string>
+    <string name="condition_mostly_clear">Mostly Clear</string>
+    <string name="condition_partly_cloudy">Partly Cloudy</string>
+    <string name="condition_overcast">Overcast</string>
+    <string name="condition_foggy">Foggy</string>
+    <string name="condition_drizzle">Drizzle</string>
+    <string name="condition_freezing_drizzle">Freezing Drizzle</string>
+    <string name="condition_rain">Rain</string>
+    <string name="condition_freezing_rain">Freezing Rain</string>
+    <string name="condition_snow">Snow</string>
+    <string name="condition_snow_grains">Snow Grains</string>
+    <string name="condition_rain_showers">Rain Showers</string>
+    <string name="condition_snow_showers">Snow Showers</string>
+    <string name="condition_thunderstorm">Thunderstorm</string>
+    <string name="condition_thunderstorm_hail">Thunderstorm with Hail</string>
+    <string name="condition_unknown">Unknown</string>
+
+    <!-- Add location -->
+    <string name="add_location">+ Add location</string>
+    <string name="add_location_title">add location</string>
+    <string name="search_hint">Search for a city</string>
+    <string name="search_empty_state">Search for a city to add to your weather locations</string>
+    <string name="no_results">No results found</string>
+
+    <!-- Settings -->
+    <string name="settings_title">settings</string>
+    <string name="setting_temperature_unit">TEMPERATURE UNIT</string>
+    <string name="setting_wind_speed_unit">WIND SPEED UNIT</string>
+    <string name="setting_manage_locations">MANAGE LOCATIONS</string>
+    <string name="unit_fahrenheit">\u00B0F</string>
+    <string name="unit_celsius">\u00B0C</string>
+    <string name="unit_mph">mph</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="no_locations">No saved locations</string>
+
+    <!-- Navigation -->
+    <string name="back">Back</string>
+
+    <!-- Errors -->
+    <string name="error_loading_weather">Unable to load weather data.\nPlease check your connection and try again.</string>
+    <string name="error_searching">Unable to search for locations.\nPlease check your connection.</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading\u2026</string>
+
+    <!-- Location item in settings -->
+    <string name="delete_location">Remove</string>
+</resources>

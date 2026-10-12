@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Header with back arrow + title -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow"
+            android:background="@drawable/bg_wp10_back_button"
+            android:backgroundTint="?attr/wpTextPrimary"
+            android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whatsapp_pairing_title"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="@dimen/settings_title_text_size"
+            android:fontFamily="@font/selawik_light"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <!-- Instructions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/whatsapp_pairing_instructions"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="16sp"
+        android:fontFamily="@font/selawik_regular"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp"
+        android:lineSpacingExtra="4dp" />
+
+    <!-- QR Code container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/qrCodeImage"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:contentDescription="QR Code" />
+
+        <ProgressBar
+            android:id="@+id/loadingSpinner"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- Phone number pairing section -->
+    <LinearLayout
+        android:id="@+id/phonePairingSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/linkWithPhoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or link with phone number"
+            android:textColor="#25D366"
+            android:textSize="15sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:id="@+id/phoneInputRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/phoneInput"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="+1 234 567 8900"
+                android:inputType="phone"
+                android:textColor="?attr/wpTextPrimary"
+                android:textColorHint="?attr/wpTextSecondary"
+                android:textSize="16sp"
+                android:fontFamily="@font/selawik_regular"
+                android:background="@drawable/bg_phone_input"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/linkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="Link"
+                android:textColor="?attr/wpBackground"
+                android:textSize="15sp"
+                android:fontFamily="@font/selawik_regular"
+                android:background="@drawable/bg_link_button"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pairingCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="32sp"
+            android:fontFamily="@font/selawik_light"
+            android:letterSpacing="0.15"
+            android:paddingTop="8dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pairingCodeHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter this code in WhatsApp on your phone"
+            android:textColor="?attr/wpTextSecondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/selawik_regular"
+            android:paddingTop="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

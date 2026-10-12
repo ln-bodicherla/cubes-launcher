@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 4 tiles in 2x2 grid - WP10 Start screen style -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,33h18v18H33zM57,33h18v18H57zM33,57h18v18H33zM57,57h18v18H57z" />
+</vector>

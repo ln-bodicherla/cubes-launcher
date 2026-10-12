@@ -20,4 +20,12 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CubesLauncher"
-include(":app")
+include(":common")
+include(":launcher")
+include(":phone")
+include(":contacts")
+include(":messages")
+include(":keyboard")
+include(":calculator")
+include(":clock")
+include(":weather")

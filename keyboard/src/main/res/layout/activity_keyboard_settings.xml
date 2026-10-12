@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/wpBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingBottom="48dp">
+
+        <!-- Header with back arrow + title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow"
+                android:background="@drawable/bg_wp10_back_button"
+                android:backgroundTint="?attr/wpTextPrimary"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keyboard_settings_title"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="@dimen/settings_title_text_size"
+                android:fontFamily="@font/selawik_light"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== TYPING SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionTyping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_settings_typing_section"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Auto-correction -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_auto_correct"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_auto_correct_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/autoCorrectionSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Auto-capitalization -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_auto_capitalize"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_auto_capitalize_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/autoCapitalizeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Double-space period -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_double_space_period"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_double_space_period_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/doubleSpacePeriodSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Show suggestions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_show_suggestions"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_show_suggestions_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/showSuggestionsSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== GLIDE TYPING SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionGlide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_settings_glide_section"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Enable glide typing -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_glide_typing"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_glide_typing_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/glideTypingSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Show glide trail -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_glide_trail"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_glide_trail_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/glideTrailSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== PREFERENCES SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_settings_preferences_section"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Number row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_number_row"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_number_row_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/numberRowSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Sound on keypress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_sound"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_sound_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/soundSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Haptic feedback -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_vibration"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_vibration_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/vibrationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Keyboard height -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/keyboard_settings_height"
+                android:textColor="?attr/wpTextPrimary"
+                android:textSize="@dimen/settings_label_text_size"
+                android:fontFamily="@font/selawik_regular" />
+
+            <Spinner
+                android:id="@+id/heightSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== VOICE SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionVoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_settings_voice_section"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Voice input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_voice_input"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_voice_input_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/voiceInputSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- ==================== CLIPBOARD SECTION ==================== -->
+        <TextView
+            android:id="@+id/sectionClipboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_settings_clipboard_section"
+            android:textSize="@dimen/settings_section_text_size"
+            android:fontFamily="@font/selawik_semibold"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Clipboard access -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_clipboard"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="@dimen/settings_label_text_size"
+                    android:fontFamily="@font/selawik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keyboard_settings_clipboard_desc"
+                    android:textColor="?attr/wpTextSecondary"
+                    android:textSize="@dimen/settings_desc_text_size"
+                    android:fontFamily="@font/selawik_regular"
+                    android:paddingTop="2dp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/clipboardSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

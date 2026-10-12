@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Large time display -->
+    <TextView
+        android:id="@+id/timeDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="72sp"
+        android:fontFamily="@font/selawik_light"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Numpad container (hidden when timer is running) -->
+    <LinearLayout
+        android:id="@+id/numpadContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Row 1: 7, 8, 9 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/key7"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key8"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key9"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Row 2: 4, 5, 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/key4"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key5"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key6"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Row 3: 1, 2, 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/key1"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key2"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key3"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Row 4: 00, 0, backspace -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/key00"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/key0"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keyBackspace"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_dial_key_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_backspace"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/selawik_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom button row (boxy style) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:gravity="center"
+            android:text="@string/timer_cancel"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="24sp"
+            android:fontFamily="@font/selawik_regular"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/startButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/timer_start"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="@font/selawik_regular"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -10,3 +10,6 @@
 local.properties
 /app/build
 /.claude
+keystore.properties
+*.jks
+*.keystore

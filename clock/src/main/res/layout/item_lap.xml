@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!-- Lap number -->
+    <TextView
+        android:id="@+id/lapNumber"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="22sp"
+        android:fontFamily="@font/selawik_regular" />
+
+    <!-- Lap time -->
+    <TextView
+        android:id="@+id/lapTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="22sp"
+        android:fontFamily="@font/selawik_regular" />
+
+    <!-- Total time -->
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="22sp"
+        android:fontFamily="@font/selawik_regular" />
+
+</LinearLayout>

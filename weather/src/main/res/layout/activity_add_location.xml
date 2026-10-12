@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Top bar with back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="40dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_weather_back"
+            android:background="?attr/wpRippleOverlay"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_location_title"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="30sp"
+            android:fontFamily="@font/selawik_light"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <!-- Search box -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/wpSurface"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:hint="@string/search_hint"
+        android:textColor="?attr/wpTextPrimary"
+        android:textColorHint="?attr/wpTextSecondary"
+        android:textSize="16sp"
+        android:fontFamily="@font/selawik_regular"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+    <!-- Search results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResultsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/emptyStateText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/search_empty_state"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="16sp"
+        android:fontFamily="@font/selawik_semilight"
+        android:visibility="visible" />
+
+    <!-- Loading indicator for search -->
+    <ProgressBar
+        android:id="@+id/searchLoadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+</LinearLayout>

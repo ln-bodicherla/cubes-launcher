@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <LinearLayout
+        android:id="@+id/bubbleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_message_sent"
+        android:padding="@dimen/message_bubble_padding">
+
+        <ImageView
+            android:id="@+id/locationThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:contentDescription="Location map preview" />
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/wp_white"
+            android:textSize="15sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/locationAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/wp_white"
+            android:textSize="13sp"
+            android:fontFamily="@font/selawik_regular"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deliveryStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="12dp"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="@dimen/message_delivery_size"
+        android:fontFamily="@font/selawik_regular"
+        android:visibility="gone" />
+
+</FrameLayout>

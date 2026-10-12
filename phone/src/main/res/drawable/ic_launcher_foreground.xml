@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Clean phone handset - WP10 style -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40.5,52.44c4.32,8.52 11.28,15.42 19.8,19.8l6.6,-6.6c0.81,-0.81 1.98,-1.08 3.03,-0.72 3.39,1.11 7.05,1.71 10.77,1.71 1.65,0 3,1.35 3,3V81c0,1.65 -1.35,3 -3,3C46.83,84 24,61.17 24,27c0,-1.65 1.35,-3 3,-3h11.1c1.65,0 3,1.35 3,3 0,3.72 0.6,7.38 1.71,10.77 0.33,1.05 0.09,2.22 -0.72,3.03L35.5,47.4z" />
+</vector>

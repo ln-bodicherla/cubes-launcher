@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Top bar with back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="40dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_weather_back"
+            android:background="?attr/wpRippleOverlay"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/back" />
+
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="30sp"
+        android:fontFamily="@font/selawik_light"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <!-- Temperature unit section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_temperature_unit"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/btnFahrenheit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="@string/unit_fahrenheit"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:background="?attr/wpSurface"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/btnCelsius"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:text="@string/unit_celsius"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:background="?attr/wpSurface"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <!-- Wind speed unit section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_wind_speed_unit"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/btnMph"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="@string/unit_mph"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:background="?attr/wpSurface"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/btnKmh"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:text="@string/unit_kmh"
+                    android:textColor="?attr/wpTextPrimary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/selawik_regular"
+                    android:background="?attr/wpSurface"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/wpSurfaceDim"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Manage locations section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_manage_locations"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_regular"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:id="@+id/locationsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- No locations message -->
+            <TextView
+                android:id="@+id/noLocationsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_locations"
+                android:textColor="?attr/wpTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/selawik_semilight"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

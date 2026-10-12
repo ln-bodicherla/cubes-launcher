@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyboard_name">Cubes Keyboard</string>
+    <string name="keyboard_subtype_en_us">English (US)</string>
+    <string name="keyboard_settings_title">Keyboard</string>
+    <string name="keyboard_settings_typing_section">typing</string>
+    <string name="keyboard_settings_auto_correct">Auto-correction</string>
+    <string name="keyboard_settings_auto_correct_desc">Correct misspelled words</string>
+    <string name="keyboard_settings_auto_capitalize">Auto-capitalization</string>
+    <string name="keyboard_settings_auto_capitalize_desc">Capitalize first word of each sentence</string>
+    <string name="keyboard_settings_double_space_period">Double-space period</string>
+    <string name="keyboard_settings_double_space_period_desc">Double tap space to insert period</string>
+    <string name="keyboard_settings_show_suggestions">Show suggestions</string>
+    <string name="keyboard_settings_show_suggestions_desc">Show word suggestions while typing</string>
+    <string name="keyboard_settings_glide_section">glide typing</string>
+    <string name="keyboard_settings_glide_typing">Enable glide typing</string>
+    <string name="keyboard_settings_glide_typing_desc">Slide finger across letters to type</string>
+    <string name="keyboard_settings_glide_trail">Show glide trail</string>
+    <string name="keyboard_settings_glide_trail_desc">Show path while glide typing</string>
+    <string name="keyboard_settings_preferences_section">preferences</string>
+    <string name="keyboard_settings_number_row">Number row</string>
+    <string name="keyboard_settings_number_row_desc">Show dedicated number row</string>
+    <string name="keyboard_settings_sound">Keyboard sound</string>
+    <string name="keyboard_settings_sound_desc">Play sound on key press</string>
+    <string name="keyboard_settings_vibration">Keyboard vibration</string>
+    <string name="keyboard_settings_vibration_desc">Vibrate on key press</string>
+    <string name="keyboard_settings_height">Keyboard height</string>
+    <string name="keyboard_settings_height_short">Short</string>
+    <string name="keyboard_settings_height_normal">Normal</string>
+    <string name="keyboard_settings_height_tall">Tall</string>
+    <string name="keyboard_settings_voice_section">voice</string>
+    <string name="keyboard_settings_voice_input">Voice typing</string>
+    <string name="keyboard_settings_voice_input_desc">Enable microphone for voice input</string>
+    <string name="keyboard_settings_clipboard_section">clipboard</string>
+    <string name="keyboard_settings_clipboard">Clipboard access</string>
+    <string name="keyboard_settings_clipboard_desc">Show recent clipboard items for quick paste</string>
+    <string name="keyboard_space_label">space</string>
+</resources>

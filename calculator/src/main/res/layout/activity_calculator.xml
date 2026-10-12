@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Spacer pushes keypad to bottom -->
+    <View
+        android:id="@+id/topSpacer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Expression display (secondary, smaller) -->
+    <TextView
+        android:id="@+id/expressionDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="24sp"
+        android:fontFamily="@font/selawik_regular"
+        android:maxLines="1"
+        android:ellipsize="start" />
+
+    <!-- Result display (primary, large) -->
+    <TextView
+        android:id="@+id/resultDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="50sp"
+        android:fontFamily="@font/selawik_light"
+        android:maxLines="1"
+        android:ellipsize="start"
+        android:text="0" />
+
+    <!-- Memory row: MC, MR, M+, M-, MS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnMemoryClear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_memory_clear"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnMemoryRecall"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_memory_recall"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnMemoryAdd"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_memory_add"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnMemorySubtract"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_memory_subtract"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnMemoryStore"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_memory_store"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: %, CE, C, Backspace -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnPercent"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_percent"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnClearEntry"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_clear_entry"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_clear"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnBackspace"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_backspace"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: 1/x, x^2, sqrt(x), divide -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnReciprocal"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_reciprocal"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnSquare"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_square"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnSquareRoot"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_sqrt"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_divide"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: 7, 8, 9, multiply -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_multiply"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: 4, 5, 6, subtract -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_subtract"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: 1, 2, 3, add -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="@string/calc_add"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+    </LinearLayout>
+
+    <!-- Row: negate, 0, decimal, equals -->
+    <LinearLayout
+        android:id="@+id/bottomRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnNegate"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:gravity="center"
+            android:text="@string/calc_negate"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="28sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnDecimal"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:gravity="center"
+            android:text="@string/calc_decimal"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_dial_key_rect" />
+
+        <TextView
+            android:id="@+id/btnEquals"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/calc_equals"
+            android:textColor="#FFFFFFFF"
+            android:textSize="36sp"
+            android:fontFamily="@font/selawik_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_calc_equals_button" />
+
+    </LinearLayout>
+
+</LinearLayout>

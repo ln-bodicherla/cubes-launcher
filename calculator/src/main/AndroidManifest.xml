@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/calculator_title"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CubesLauncher">
+
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.cubeslauncher.calculator"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.cubeslauncher.action.LAUNCH_CALCULATOR" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ThemeChangedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cubeslauncher.action.THEME_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

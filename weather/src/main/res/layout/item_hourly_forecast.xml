@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="72dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="14sp"
+        android:fontFamily="@font/selawik_regular"
+        android:gravity="center"
+        tools:text="2PM" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        tools:src="@drawable/ic_weather_clear" />
+
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="16sp"
+        android:fontFamily="@font/selawik_regular"
+        android:gravity="center"
+        tools:text="72\u00B0" />
+
+</LinearLayout>

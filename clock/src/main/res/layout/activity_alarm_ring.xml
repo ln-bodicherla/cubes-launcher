@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground"
+    android:gravity="center">
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Time display -->
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="60sp"
+        android:fontFamily="@font/selawik_light"
+        android:gravity="center" />
+
+    <!-- Label -->
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/wpTextSecondary"
+        android:textSize="24sp"
+        android:fontFamily="@font/selawik_semilight"
+        android:gravity="center"
+        android:paddingTop="8dp" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Dismiss button -->
+    <TextView
+        android:id="@+id/dismissButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/dismiss"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/selawik_regular"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Snooze button -->
+    <TextView
+        android:id="@+id/snoozeButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="@string/snooze"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="20sp"
+        android:fontFamily="@font/selawik_regular"
+        android:background="?attr/wpSurface"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

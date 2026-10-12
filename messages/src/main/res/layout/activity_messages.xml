@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- ViewPager2 fills the top space -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- WP10 Pivot tabs at bottom -->
+    <LinearLayout
+        android:id="@+id/pivotContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/pivotScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:fillViewport="false"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:id="@+id/pivotHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="72dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tabMessages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_tab_messages"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/selawik_semilight"
+                        android:layout_marginEnd="24dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/tabGroups"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_tab_groups"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/selawik_semilight"
+                        android:layout_marginEnd="24dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/tabWhatsApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_tab_whatsapp"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/selawik_semilight"
+                        android:layout_marginEnd="24dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tabArchived"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_tab_archived"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/selawik_semilight"
+                        android:layout_marginEnd="24dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/tabDeleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_tab_deleted"
+                        android:textColor="?attr/wpTextSecondary"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/selawik_semilight"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/settingsButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end|center_vertical"
+                android:padding="12dp"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="@string/app_settings"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground"
+    android:paddingTop="64dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_picker_title"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="30sp"
+        android:fontFamily="@font/selawik_light"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp" />
+
+    <!-- Search field -->
+    <EditText
+        android:id="@+id/searchEdit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="?attr/wpSurfaceDim"
+        android:textColor="?attr/wpTextPrimary"
+        android:textSize="18sp"
+        android:fontFamily="@font/selawik_regular"
+        android:hint="@string/city_picker_search_hint"
+        android:textColorHint="?attr/wpTextSecondary"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <!-- City list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/citiesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

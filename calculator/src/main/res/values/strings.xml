@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_title">Calculator</string>
+    <string name="calc_memory_clear">MC</string>
+    <string name="calc_memory_recall">MR</string>
+    <string name="calc_memory_add">M+</string>
+    <string name="calc_memory_subtract">M\u2212</string>
+    <string name="calc_memory_store">MS</string>
+    <string name="calc_percent">%</string>
+    <string name="calc_clear_entry">CE</string>
+    <string name="calc_clear">C</string>
+    <string name="calc_backspace">\u232B</string>
+    <string name="calc_reciprocal">1/x</string>
+    <string name="calc_square">x\u00B2</string>
+    <string name="calc_sqrt">\u221Ax</string>
+    <string name="calc_divide">\u00F7</string>
+    <string name="calc_multiply">\u00D7</string>
+    <string name="calc_subtract">\u2212</string>
+    <string name="calc_add">+</string>
+    <string name="calc_negate">\u00B1</string>
+    <string name="calc_decimal">.</string>
+    <string name="calc_equals">=</string>
+</resources>

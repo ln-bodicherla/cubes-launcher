@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/wpBackground">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/wpTextPrimary"
+            android:textSize="24sp"
+            android:fontFamily="@font/selawik_semibold"
+            android:paddingStart="12dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <!-- Messages list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+    <!-- Compose bar -->
+    <LinearLayout
+        android:id="@+id/composeBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/message_compose_bar_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/wpSurface"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/attachButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_messages_attach"
+            android:background="@null"
+            android:contentDescription="Attach"
+            android:scaleType="center" />
+
+        <EditText
+            android:id="@+id/composeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/messages_compose_hint"
+            android:textColor="?attr/wpTextPrimary"
+            android:textColorHint="?attr/wpTextSecondary"
+            android:textSize="16sp"
+            android:fontFamily="@font/selawik_regular"
+            android:background="@null"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:maxLines="4"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_messages_send"
+            android:background="@null"
+            android:contentDescription="@string/messages_send"
+            android:scaleType="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

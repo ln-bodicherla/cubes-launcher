@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/contacts_title"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CubesLauncher">
+
+        <activity
+            android:name=".ContactsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.cubeslauncher.contacts"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.cubeslauncher.action.LAUNCH_CONTACTS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data android:mimeType="vnd.android.cursor.dir/contact" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PeopleSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher" />
+
+        <activity
+            android:name=".ContactDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher" />
+
+        <activity
+            android:name=".ContactEditActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher" />
+
+        <activity
+            android:name=".GroupDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CubesLauncher" />
+
+        <receiver
+            android:name=".ThemeChangedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cubeslauncher.action.THEME_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
